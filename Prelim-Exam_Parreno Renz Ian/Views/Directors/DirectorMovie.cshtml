@@ -1,0 +1,13 @@
+﻿@model MvcMovie.Models.Movie
+
+@{ ViewData["Title"] = "DirectorMovie"; }
+
+<div align='center'>
+    <h1>You what to Remove ( @Html.DisplayFor(model => model.Title) ) ?</h1>
+
+    <form asp-action="DirectorMovie">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Yes" class="btn btn-danger" />
+        <a class="btn btn-small btn-success" asp-action="Index">No</a>
+    </form>
+</div>
